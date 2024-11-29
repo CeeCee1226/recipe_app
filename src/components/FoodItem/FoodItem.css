@@ -1,0 +1,84 @@
+.section {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+button {
+  background-color: #ff4d00;
+  color: black;
+  border: none; 
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #fff;
+}
+
+.featured-food,
+.featured-recipe,
+.featured-cook {
+  width: 300px; 
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.food-item {
+  width: 100%;
+  margin: auto;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px #00000015;
+  transition: 0.3s;
+  animation: fadeIn 1s;
+  display: flex;
+  flex-direction: row;
+}
+.food-item-image{
+  width: 100%;
+  height: 200px; /* Adjusted height for images */
+  object-fit: cover; /* Maintain aspect ratio and prevent stretching */
+  border-radius: 15px 15px 0 0;
+}  
+.food-item-img-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.food-item-info {
+  padding: 20px;
+  text-align: center; /* Center the content */
+}
+
+
+.food-item-name-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.food-item-name-rating p {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0; /* Remove default margin */
+}
+.food-item-desc{
+color: #676767;
+font-size: 12px;
+} 
+.btn {
+  background-color: #ff4d00;
+  color: black;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ffa500;
+  }
