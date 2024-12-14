@@ -1,21 +1,24 @@
-import React from 'react';
 import './Navbar.css';
-import { Images } from '../../assets/assets'; // Correct path to assets.js
+import { Images } from '../../assets/assets';
+import PropTypes from 'prop-types';
 
-const Navbar = () => {
+const Navbar = ({ setShowLogin }) => {
   return (
     <div className="navbar">
       <img src={Images.icook} className="iCook" alt="iCook" />
       <div className="search">
         <input type="text" placeholder="Хоолны нэрээр хайх" />
-        <button className="searchicon">
+        <div className="searchicon">
           <img src={Images.searchicon} alt="search-icon" />
-        </button>
+        </div>
       </div>
-      <button className="sigin">Нэвтрэх</button>
-      <button className="signup">Бүртгүүлэх</button>
+      <button className="signin" onClick={() => setShowLogin(true)}>Нэвтрэх</button>
     </div>
   );
+};
+
+Navbar.propTypes = {
+  setShowLogin: PropTypes.func.isRequired,
 };
 
 export default Navbar;

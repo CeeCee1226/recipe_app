@@ -11,12 +11,17 @@ import cook_1 from './cook_1.png';
 import cook_2 from './cook_2.png';
 import cook_3 from './cook_3.png';
 import meal1 from './meal1.png';
-
+import facebook_1 from './facebook_1.png';
+import instagram_1 from './instagram_1.png';
+import twitter from './twitter.png';
+import youtube from './youtube.png';
+import cross_icon from './cross_icon.png'
 export const Images = {
   icook,
   icon,
   searchicon,
   meal1,
+  cross_icon
 };
 export const f_list = [
     {
@@ -75,3 +80,9 @@ export const f_list = [
         description: "Хха"
     }
 ]
+ export const FooterImg = {
+    facebook_1,
+    instagram_1,
+    twitter,
+    youtube,
+};

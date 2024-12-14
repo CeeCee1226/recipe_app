@@ -21,7 +21,7 @@
   }
   
   .search input {
-    flex: 1;
+    flex: 10px;
     padding: 10px;
     border: none;
     outline: none;
@@ -40,13 +40,13 @@
   }
   
   .searchicon img {
-    width: 70%; /* Adjust width to make the image smaller */
-    height: 70%; /* Adjust height to maintain aspect ratio */
-    object-fit: contain; /* Ensure the image scales properly */
+    width: 70%; 
+    height: 70%; 
+    object-fit: contain; 
   }
   
   .sigin, .signup {
-    background-color: #ff4d00; /* Green background for buttons */
+    background-color: #ff4d00; 
     color: black;
     padding: 10px 20px;
     border: none;
@@ -55,6 +55,46 @@
   }
   
   .sigin:hover, .signup:hover {
-    background-color: #fff; /* Slightly darker green on hover */
+    background-color: #fff; 
+  }
+  @media (max-width: 1050px) {
+    .navbar .iCook {
+      width: 140px;
+    }
+    .navbar .search {
+      gap: 20px;
+      font-size: 12px;
+    }
+    .sigin {
+      padding: 8px 25px;
+    }
+    .signup {
+      padding: 8px 25px;
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .navbar .iCook {
+      width: 120px;
+    }
+    .navbar .search {
+      gap: 10px;
+      font-size: 16px;
+    }
+    .sigin {
+      padding: 7px 20px;
+    }
+    .signup {
+      padding: 7px 20px;
+    }
+  }
+  
+  @media (max-width: 750px) {
+    .navbar .iCook, 
+    .navbar .sigin, 
+    .navbar .signup, 
+    .navbar .search {
+      display: none;
+    }
   }
   

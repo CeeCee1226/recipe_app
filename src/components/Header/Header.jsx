@@ -1,5 +1,4 @@
-import React from 'react';
-import { Images } from '../../assets/assets'; // Ensure the path to assets is correct
+import { Images } from '../../assets/assets'; 
 import './Header.css'
 const Header = () => {
   return (

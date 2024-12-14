@@ -1,10 +1,10 @@
-/* Header.css */
 .header {
     padding: 20px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 80px;
+    gap: 50px;
+    margin-left: 180px;
 }
   
   .header-contents {
@@ -22,8 +22,25 @@
   
   .header img { 
     margin-top: 10px;
-    width: 80vh;
-    height: 50vh;
+    width: 90vh;
+    height: 60vh;
     border-radius: 10px;
   }
-  
+@media (max-width: 1050px){
+  .header{
+    height: 38vw;
+  }
+  .header-contents{
+    max-width: 45%;
+  }
+}  
+@media (max-width: 750px){
+  .header-contents{
+    max-width: 55%;
+  }
+  .header-contents h2,
+  .header-contents p{
+    display: none;
+  }
+ }  
+ 

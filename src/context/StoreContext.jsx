@@ -1,12 +1,19 @@
-import { createContext } from "react";
-import { f_list } from "../assets/assets";
-export const StoreContext = createContext(null)
-const StoreContextProvider = ({children}) =>{
-    const contextValue = {f_list} 
-    return(
+    import PropTypes from 'prop-types';
+    import { f_list } from '../assets/assets';
+    import { StoreContext } from './StoreContext'; 
+
+    const StoreContextProvider = ({ children }) => {
+    const contextValue = { f_list };
+
+    return (
         <StoreContext.Provider value={contextValue}>
-            {children}
+        {children}
         </StoreContext.Provider>
-    )
-}
-export default StoreContextProvider
+    );
+    };
+
+    StoreContextProvider.propTypes = {
+    children: PropTypes.node.isRequired, 
+    };
+
+    export default StoreContextProvider;
