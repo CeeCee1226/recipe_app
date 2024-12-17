@@ -1,17 +1,17 @@
-import React from 'react';
+import PropTypes from 'prop-types'; // Import PropTypes
 import { useNavigate } from 'react-router-dom';
 import { Images } from '../../assets/assets';
 import FoodDisplay from '../FoodDisplay/FoodDisplay';
 import Footer from '../Footer/Footer';
 import './Home.css';
 
-const Home = ({ currentUserName, onLogout }) => {
+const Home = ({ onLogout }) => {
   const navigate = useNavigate();
 
   const sections = [
     { title: 'Жор нэмэх', icon: Images.addrecipe, route: './AddRecipe' },
     { title: 'Миний жор', icon: Images.myrecipe },
-    { title: 'Миний про', icon: Images.myprofile },
+    { title: 'Миний про', icon: Images.myprofile, route: './MyProfile'},
   ];
 
   const handleSectionClick = (route) => {
@@ -54,6 +54,10 @@ const Home = ({ currentUserName, onLogout }) => {
       </div>
     </div>
   );
+};
+
+Home.propTypes = {
+  onLogout: PropTypes.func.isRequired, 
 };
 
 export default Home;

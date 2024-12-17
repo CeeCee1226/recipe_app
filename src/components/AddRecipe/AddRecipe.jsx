@@ -1,11 +1,8 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 import { Images } from '../../assets/assets';
-import './AddRecipe.css'
-const AddRecipe = () => {
-  const navigate = useNavigate();
-  
-  // Form state
+import './AddRecipe.css';
+
+const AddRecipe = () => {  
   const [recipe, setRecipe] = useState({
     name: '',
     type: '',
@@ -36,15 +33,14 @@ const AddRecipe = () => {
       <div className="container">
         <div className="topbar">
           <img src={Images.icook} className="iCook" alt="iCook Logo" />
-      
         </div>
 
         <form onSubmit={handleSubmit}>
           <div className="form-group">
-            <label htmlFor="recipe-name">Жор нэр</label>
+            <label htmlFor="name">Жорын нэр</label>
             <input
               type="text"
-              id="recipe-name"
+              id="name"
               value={recipe.name}
               onChange={handleInputChange}
               placeholder="Жорын нэр"
@@ -52,15 +48,16 @@ const AddRecipe = () => {
           </div>
 
           <div className="form-group">
-            <label htmlFor="recipe-type">Жорын төрөл</label>
+            <label htmlFor="type">Жорын төрөл</label>
             <input
               type="text"
-              id="recipe-type"
+              id="type"
               value={recipe.type}
               onChange={handleInputChange}
               placeholder="Жорын төрөл"
             />
           </div>
+
           <div className="form-group">
             <label htmlFor="ingredients">Найрлага</label>
             <textarea
@@ -72,40 +69,42 @@ const AddRecipe = () => {
           </div>
 
           <div className="form-group">
-            <label htmlFor="step-1">1-р алхам</label>
+            <label htmlFor="step1">1-р алхам</label>
             <textarea
-              id="step-1"
+              id="step1"
               value={recipe.step1}
               onChange={handleInputChange}
-              placeholder="Тодорхойлолт..."
+              placeholder="Дэлгэрэнгүй тайлбарлах..."
             />
           </div>
 
           <div className="form-group">
-            <label htmlFor="step-2">2-р алхам</label>
+            <label htmlFor="step2">2-р алхам</label>
             <textarea
-              id="step-2"
+              id="step2"
               value={recipe.step2}
               onChange={handleInputChange}
-              placeholder="Тодорхойлолт..."
+              placeholder="Дэлгэрэнгүй тайлбарлах..."
             />
           </div>
 
           <div className="form-group">
-            <label htmlFor="step-3">3-р алхам</label>
+            <label htmlFor="step3">3-р алхам</label>
             <textarea
-              id="step-3"
+              id="step3"
               value={recipe.step3}
               onChange={handleInputChange}
-              placeholder="Тодорхойлолт..."
+              placeholder="Дэлгэрэнгүй тайлбарлах..."
             />
           </div>
-
+          <div className="addStep">
+            <button>Алхам нэмэх</button>
+          </div>
           <div className="form-group">
-            <label htmlFor="prep-time">Бэлдэх хугацаа</label>
+            <label htmlFor="prepTime">Бэлдэх хугацаа</label>
             <input
               type="number"
-              id="prep-time"
+              id="prepTime"
               value={recipe.prepTime}
               onChange={handleInputChange}
               placeholder="min"
@@ -113,10 +112,10 @@ const AddRecipe = () => {
           </div>
 
           <div className="form-group">
-            <label htmlFor="cook-time">Хоол хийх хугацаа</label>
+            <label htmlFor="cookTime">Хоол хийх хугацаа</label>
             <input
               type="number"
-              id="cook-time"
+              id="cookTime"
               value={recipe.cookTime}
               onChange={handleInputChange}
               placeholder="hours"
@@ -124,17 +123,19 @@ const AddRecipe = () => {
           </div>
 
           <div className="form-group">
-            <label htmlFor="total-time">Нийт хугацаа</label>
+            <label htmlFor="totalTime">Нийт хугацаа</label>
             <input
               type="number"
-              id="total-time"
+              id="totalTime"
               value={recipe.totalTime}
               onChange={handleInputChange}
               placeholder="hours"
             />
           </div>
 
-          <button type="submit" className="submit-button">Шинээр нэмэх</button>
+          <button type="submit" className="submit-button">
+            Илгээх
+          </button>
         </form>
       </div>
     </div>

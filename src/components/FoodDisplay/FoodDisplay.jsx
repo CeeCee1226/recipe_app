@@ -6,11 +6,14 @@ import FoodItem from '../FoodItem/FoodItem';
 const FoodDisplay = () => {
   const { f_list } = useContext(StoreContext);
 
-  // Divide the food list into sections of three items each
+  if (!f_list || f_list.length === 0) {
+    return <div>Loading...</div>;
+  }
+
   const sections = [
-    f_list.slice(0, 3), // First 3 items
-    f_list.slice(3, 6), // Next 3 items
-    f_list.slice(6, 9), // Last 3 items
+    f_list.slice(0, 3),
+    f_list.slice(3, 6),
+    f_list.slice(6, 9),
   ];
 
   return (
@@ -23,9 +26,9 @@ const FoodDisplay = () => {
             <button className="featured-cook">Онцгойлсон тогооч</button>
           </div>
           <div className="food-display-list">
-            {section.map((item) => (
+            {section.map((item, idx) => (
               <FoodItem
-                key={item.id}
+                key={item.id || `food-${idx}`}
                 name={item.name}
                 description={item.description}
                 image={item.image}

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';  // No BrowserRouter here
 import { Grid } from '@mui/material';
 import Navbar from './components/Navbar/Navbar';
@@ -8,7 +8,8 @@ import FoodDisplay from './components/FoodDisplay/FoodDisplay';
 import Footer from './components/Footer/Footer';
 import Login from './components/Login/Login';
 import Home from './components/Home/Home';
-import AddRecipe from './components/AddRecipe/AddRecipe'; // AddRecipe component for the page
+import AddRecipe from './components/AddRecipe/AddRecipe'; 
+import MyProfile from './components/MyProfile/MyProfile';
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -28,15 +29,13 @@ const App = () => {
 
   return (
     <div className="app">
-      {/* Login screen only when showLogin is true and not logged in */}
       {showLogin && !loggedIn && <Login setShowLogin={setShowLogin} onLogin={handleLogin} />}
-      
-      {/* Main routes that are shown when logged in */}
-      <Routes>
+            <Routes>
         {loggedIn ? (
           <>
             <Route path="/" element={<Home currentUserName={currentUserName} onLogout={handleLogout} />} />
             <Route path="/AddRecipe" element={<AddRecipe />} />
+            <Route path='/MyProfile' element = {<MyProfile/>}/>
             <Route path="*" element={<Navigate to="/" />} />
           </>
         ) : (

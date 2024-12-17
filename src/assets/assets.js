@@ -20,6 +20,7 @@ import addrecipe from './addrecipe.png';
 import favourites from './favourites.png';
 import myprofile from './myprofile.png';
 import myrecipe from './myrecipe.png';
+import profile from './profile.jpg';
 export const Images = {
   icook,
   icon,
@@ -29,7 +30,8 @@ export const Images = {
   addrecipe,
   favourites,
     myprofile,
-    myrecipe
+    myrecipe,
+    profile,
 };
 export const f_list = [
     {

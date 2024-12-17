@@ -20,9 +20,9 @@ const FoodItem = ({ name, description, image, button }) => {
 };
 
 FoodItem.propTypes = {
-  name: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
+  name: PropTypes.string,
+  description: PropTypes.string,
+  image: PropTypes.string,
   button: PropTypes.string,
 };
 
