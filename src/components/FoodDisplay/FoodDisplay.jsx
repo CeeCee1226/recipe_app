@@ -1,4 +1,4 @@
-import  { useContext } from 'react'; 
+import { useContext } from 'react';
 import './FoodDisplay.css';
 import { StoreContext } from '../../context/StoreContext';
 import FoodItem from '../FoodItem/FoodItem';
@@ -6,7 +6,12 @@ import FoodItem from '../FoodItem/FoodItem';
 const FoodDisplay = () => {
   const { f_list } = useContext(StoreContext);
 
-  const sections = [f_list.slice(0, 3), f_list.slice(3, 6), f_list.slice(6, 9)];
+  // Divide the food list into sections of three items each
+  const sections = [
+    f_list.slice(0, 3), // First 3 items
+    f_list.slice(3, 6), // Next 3 items
+    f_list.slice(6, 9), // Last 3 items
+  ];
 
   return (
     <div className="food-display" id="food-display">
@@ -21,7 +26,6 @@ const FoodDisplay = () => {
             {section.map((item) => (
               <FoodItem
                 key={item.id}
-                id={item.id}
                 name={item.name}
                 description={item.description}
                 image={item.image}

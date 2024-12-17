@@ -15,13 +15,21 @@ import facebook_1 from './facebook_1.png';
 import instagram_1 from './instagram_1.png';
 import twitter from './twitter.png';
 import youtube from './youtube.png';
-import cross_icon from './cross_icon.png'
+import cross_icon from './cross_icon.png';
+import addrecipe from './addrecipe.png';
+import favourites from './favourites.png';
+import myprofile from './myprofile.png';
+import myrecipe from './myrecipe.png';
 export const Images = {
   icook,
   icon,
   searchicon,
   meal1,
-  cross_icon
+  cross_icon,
+  addrecipe,
+  favourites,
+    myprofile,
+    myrecipe
 };
 export const f_list = [
     {
