@@ -13,12 +13,12 @@ const MyProfile = () => {
 
   const sections = [
     { title: 'Жор нэмэх', icon: Images.addrecipe, route: '/AddRecipe' },
-    { title: 'Миний жор', icon: Images.myrecipe },
+    { title: 'Миний жор', icon: Images.myrecipe, route: '/MyRecipe  ' },
     { title: 'Миний про', icon: Images.myprofile, route: '/MyProfile' },
   ];
 
   const handleSectionClick = (route) => {
-    if (route) navigate(route); // Use navigate for routing
+    if (route) navigate(route);
   };
 
   return (

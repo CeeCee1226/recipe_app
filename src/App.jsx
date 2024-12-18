@@ -10,7 +10,6 @@ import Login from './components/Login/Login';
 import Home from './components/Home/Home';
 import AddRecipe from './components/AddRecipe/AddRecipe'; 
 import MyProfile from './components/MyProfile/MyProfile';
-
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
   const [loggedIn, setLoggedIn] = useState(false);
